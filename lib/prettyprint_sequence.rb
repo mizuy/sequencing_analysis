@@ -1,55 +1,53 @@
-def iterate(from, to, step=1)
-  i = from
-  while i<to
-    yield i
-    i += step
-  end
-end
+require 'rubygems'
+require 'builder'
 
-def print_html_sequence(out, seq)
-  out.print '<pre>'
-  i = 0
-  length = seq.length
-  iterate(i, length, 100) do |i|
-    out.print "<span class=\"seq-index\">#{sprintf '%04d', i}: </span>"
-    iterate(i, [i+100, length].min, 10) do |ii|
-      (ii...[ii+10, length].min).each do |iii|
-        out.print seq[iii].chr
-      end
-      out.print ' '
-    end
-    out.print "\n"
-  end
-  out.print '</pre>'
-end
+module PrettyPrintSequence
+  module_function
 
-def print_html_sequences(out, seqs, names=nil)
-  if names
-    raise unless names.length==seqs.length
-  end
-  num = seqs.length
-  out.print '<pre>'
-  length = seqs.map{|x|x.length}.max
-  i = 0
-  iterate(i, length, 100) do |i|
-    (0...num).each do |j|
-      out.print "<span class=\"seq-index\">#{sprintf '%04d', i}: </span>"
-      iterate(i, [i+100, length].min, 10) do |ii|
-        (ii...[ii+10, length].min).each do |iii|
-          c = seqs[j][iii]
-          char = c ? c.chr : ' '
-          if char=='N'
-            out.print "<span style=\"color:#f00;\">N</span>"
-          else
-            out.print char
+  def print_html_sequence(out, seq)
+    b = Builder::XmlMarkup.new :target=>out
+    b.pre {
+      (0...seq.length).each_slice(100) do |line|
+        b.span("class"=>"seq-index") {b.text! "#{sprintf '%04d', line[0]}: "}
+        line.each_slice(10) do |block|
+          block.each do |i|
+            b.text! seq[i].chr
           end
+          b.text! ' '
         end
-        out.print ' '
+        b.text! "\n"
       end
-      out.print "\n"
-    end
-    out.print "\n"
+    }
   end
-  out.print '</pre>'
-end
 
+  def print_html_sequences(out, seqs, names=nil)
+    if names
+      raise unless names.length==seqs.length
+    end
+    num = seqs.length
+    length = seqs.map{|x|x.length}.max
+    b = Builder::XmlMarkup.new :target=>out
+    b.pre{
+      (0...length).each_slice(100) do |line|
+        seqs.each.with_index do |seq,j|
+          b.span("class"=>"seq-index") {b.text! "#{sprintf '%04d', line[0]}: "}
+          line.each_slice(10) do |block|
+            block.each do |i|
+              c = seq[i]
+              char = c ? c.chr : ' '
+              if char=='N'
+                b.span("style"=>"color:#f00;"){ b.text! "N" }
+              else
+                b.text! char
+              end
+            end
+            b.text! ' '
+          end
+          b.text! "\n"
+        end
+        b.text! "\n"
+      end
+    }
+  end
+
+end
