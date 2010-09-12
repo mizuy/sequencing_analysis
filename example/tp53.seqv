@@ -1,0 +1,10 @@
+> general
+primers: primer_public.txt
+
+> template
+tp53: tp53.gb
+
+> pcr
+
+UniSTS156792: F0, R0
+PMC122799P3: F1, R1
