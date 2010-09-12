@@ -1,3 +1,15 @@
-sequencing_analysis
 
+ruby 1.9.2 p0
+
+= align_sequencing
 tools for analyzing *.ab1 sequenceing files.
+
+== requirements
+bioruby (http://github.com/mizuy/bioruby)
+
+= seqview
+
+== requirements
+
+bioruby (http://github.com/mizuy/bioruby)
+rmagick 2.13.1 (gem install rmagick)
