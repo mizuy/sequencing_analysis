@@ -1,0 +1,746 @@
+LOCUS       NG_017013              19144 bp    DNA     linear   PRI 09-JUL-2010
+DEFINITION  Homo sapiens tumor protein p53 (TP53), RefSeqGene on chromosome 17.
+ACCESSION   NG_017013 REGION: 5000..24143
+VERSION     NG_017013.1  GI:293651587
+KEYWORDS    RefSeqGene.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 19144)
+  AUTHORS   Naidu,S.R., Love,I.M., Imbalzano,A.N., Grossman,S.R. and
+            Androphy,E.J.
+  TITLE     The SWI/SNF chromatin remodeling subunit BRG1 is a critical
+            regulator of p53 necessary for proliferation of malignant cells
+  JOURNAL   Oncogene 28 (27), 2492-2501 (2009)
+   PUBMED   19448667
+REFERENCE   2  (bases 1 to 19144)
+  AUTHORS   Anczukow,O., Ware,M.D., Buisson,M., Zetoune,A.B.,
+            Stoppa-Lyonnet,D., Sinilnikova,O.M. and Mazoyer,S.
+  TITLE     Does the nonsense-mediated mRNA decay mechanism prevent the
+            synthesis of truncated BRCA1, CHK2, and p53 proteins?
+  JOURNAL   Hum. Mutat. 29 (1), 65-73 (2008)
+   PUBMED   17694537
+REFERENCE   3  (bases 1 to 19144)
+  AUTHORS   Bourdon,J.C.
+  TITLE     p53 Family isoforms
+  JOURNAL   Curr Pharm Biotechnol 8 (6), 332-336 (2007)
+   PUBMED   18289041
+  REMARK    Review article
+REFERENCE   4  (bases 1 to 19144)
+  AUTHORS   Murray-Zmijewski,F., Lane,D.P. and Bourdon,J.C.
+  TITLE     p53/p63/p73 isoforms: an orchestra of isoforms to harmonise cell
+            differentiation and response to stress
+  JOURNAL   Cell Death Differ. 13 (6), 962-972 (2006)
+   PUBMED   16601753
+  REMARK    Review article
+REFERENCE   5  (bases 1 to 19144)
+  AUTHORS   Bourdon,J.C., Fernandes,K., Murray-Zmijewski,F., Liu,G., Diot,A.,
+            Xirodimas,D.P., Saville,M.K. and Lane,D.P.
+  TITLE     p53 isoforms can regulate p53 transcriptional activity
+  JOURNAL   Genes Dev. 19 (18), 2122-2137 (2005)
+   PUBMED   16131611
+COMMENT     REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence was derived from AC087388.9 and AC007421.13.
+            This sequence is a reference standard in the RefSeqGene project.
+            
+            Summary: This gene encodes tumor protein p53, which responds to
+            diverse cellular stresses to regulate target genes that induce cell
+            cycle arrest, apoptosis, senescence, DNA repair, or changes in
+            metabolism. p53 protein is expressed at low level in normal cells
+            and at a high level in a variety of transformed cell lines, where
+            it's believed to contribute to transformation and malignancy. p53
+            is a DNA-binding protein containing transcription activation,
+            DNA-binding, and oligomerization domains. It is postulated to bind
+            to a p53-binding site and activate expression of downstream genes
+            that inhibit growth and/or invasion, and thus function as a tumor
+            suppressor. Mutants of p53 that frequently occur in a number of
+            different human cancers fail to bind the consensus DNA binding
+            site, and hence cause the loss of tumor suppressor activity.
+            Alterations of this gene occur not only as somatic mutations in
+            human malignancies, but also as germline mutations in some
+            cancer-prone families with Li-Fraumeni syndrome. Multiple p53
+            variants due to alternative promoters and multiple alternative
+            splicing have been found. These variants encode distinct isoforms,
+            which can regulate p53 transcriptional activity. [provided by
+            RefSeq].
+PRIMARY     REFSEQ_SPAN         PRIMARY_IDENTIFIER PRIMARY_SPAN        COMP
+            1-20374             AC087388.9         62565-82938
+            20375-26144         AC007421.13        1-5770
+FEATURES             Location/Qualifiers
+     source          1..19144
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="17"
+                     /map="17p13.1"
+     gene            complement(<1..1476)
+                     /gene="WRAP53"
+                     /gene_synonym="FLJ10385; TCAB1; WDR79"
+                     /note="WD repeat containing, antisense to TP53"
+                     /db_xref="GeneID:55135"
+                     /db_xref="HGNC:25522"
+                     /db_xref="MIM:612661"
+     mRNA            complement(1323..1476)
+                     /gene="WRAP53"
+                     /gene_synonym="FLJ10385; TCAB1; WDR79"
+                     /product="WD repeat containing, antisense to TP53"
+                     /transcript_id="NM_001143990.1"
+                     /db_xref="GI:221136857"
+                     /db_xref="GeneID:55135"
+                     /db_xref="HGNC:25522"
+                     /db_xref="MIM:612661"
+     mRNA            complement(<1..107)
+                     /gene="WRAP53"
+                     /gene_synonym="FLJ10385; TCAB1; WDR79"
+                     /product="WD repeat containing, antisense to TP53"
+                     /transcript_id="NM_001143991.1"
+                     /db_xref="GI:221136861"
+                     /db_xref="GeneID:55135"
+                     /db_xref="HGNC:25522"
+                     /db_xref="MIM:612661"
+     STS             <1..85
+                     /standard_name="GDB:181608"
+                     /db_xref="UniSTS:155314"
+     gene            2..>19144
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /note="tumor protein p53"
+                     /db_xref="GeneID:7157"
+                     /db_xref="HGNC:11998"
+                     /db_xref="MIM:191170"
+     mRNA            join(2..170,10925..11026,11144..11165,11275..11553,
+                     12311..12494,12576..12688,13257..13366,13710..13846,
+                     13939..14012,16832..16938,17857..>19144)
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /product="tumor protein p53"
+                     /transcript_id="NM_000546.4"
+                     /db_xref="GI:187830767"
+                     /db_xref="GeneID:7157"
+                     /db_xref="HGNC:11998"
+                     /db_xref="MIM:191170"
+     exon            2..170
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=1
+     STS             1517..1611
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:316876"
+                     /db_xref="UniSTS:156580"
+     STS             7748..7905
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:186984"
+                     /db_xref="UniSTS:155527"
+     STS             10884..11605
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC122799P1"
+                     /db_xref="UniSTS:270407"
+     exon            10925..11026
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=2a
+     exon            10928..11026
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=2b
+     CDS             join(10953..11026,11144..11165,11275..11553,12311..12494,
+                     12576..12688,13257..13366,13710..13846,13939..14012,
+                     16832..16938,17857..17938)
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /note="isoform a is encoded by transcript variant 1; p53
+                     tumor suppressor; phosphoprotein p53;
+                     transformation-related protein 53; antigen NY-CO-13;
+                     cellular tumor antigen p53"
+                     /codon_start=1
+                     /product="cellular tumor antigen p53 isoform a"
+                     /protein_id="NP_000537.3"
+                     /db_xref="GI:120407068"
+                     /db_xref="CCDS:CCDS11118.1"
+                     /db_xref="GeneID:7157"
+                     /db_xref="HGNC:11998"
+                     /db_xref="MIM:191170"
+     STS             11085..11502
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:606441"
+                     /db_xref="UniSTS:158229"
+     exon            11144..11165
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=3
+     STS             11233..11645
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:227151"
+                     /db_xref="UniSTS:156250"
+     STS             11267..11562
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:363686"
+                     /db_xref="UniSTS:156783"
+     exon            11275..11553
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=4
+     STS             11281..11479
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:177814"
+                     /db_xref="UniSTS:154969"
+     STS             11295..11553
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:177797"
+                     /db_xref="UniSTS:154963"
+     exon            12054..12494
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=5a
+     STS             12264..12515
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC22021P1"
+                     /db_xref="UniSTS:272087"
+     STS             12287..12742
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC122799P2"
+                     /db_xref="UniSTS:270408"
+     STS             12296..12703
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:604633"
+                     /db_xref="UniSTS:158212"
+     STS             12296..12692
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:178567"
+                     /db_xref="UniSTS:155019"
+     STS             12296..12620
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:363689"
+                     /db_xref="UniSTS:156784"
+     STS             12296..12508
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:363724"
+                     /db_xref="UniSTS:156790"
+     STS             12296..12406
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:177724"
+                     /db_xref="UniSTS:154952"
+     exon            12311..12494
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=5b
+     STS             12413..12487
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC340938P3"
+                     /db_xref="UniSTS:273171"
+     STS             12468..12703
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:363692"
+                     /db_xref="UniSTS:156785"
+     STS             12517..12704
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:186560"
+                     /db_xref="UniSTS:155496"
+     STS             12520..12703
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:186921"
+                     /db_xref="UniSTS:155522"
+     STS             12555..12709
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC22021P2"
+                     /db_xref="UniSTS:272088"
+     exon            12576..12688
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=6
+     STS             12687..12793
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:181271"
+                     /db_xref="UniSTS:155232"
+     STS             13209..13486
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:188738"
+                     /db_xref="UniSTS:155578"
+     STS             13229..14107
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC122799P3"
+                     /db_xref="UniSTS:270409"
+     STS             13239..13386
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC22021P3"
+                     /db_xref="UniSTS:272089"
+     STS             13243..14023
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:181272"
+                     /db_xref="UniSTS:155233"
+     STS             13243..13860
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:605513"
+                     /db_xref="UniSTS:158213"
+     exon            13257..13366
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=7
+     STS             13337..13970
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC310707P2"
+                     /db_xref="UniSTS:272633"
+     STS             13341..13758
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:190076"
+                     /db_xref="UniSTS:155620"
+     STS             13619..14063
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC105081P1"
+                     /db_xref="UniSTS:270116"
+     STS             13659..14032
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC22021P4"
+                     /db_xref="UniSTS:272090"
+     STS             13662..13861
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC60253P1"
+                     /db_xref="UniSTS:273402"
+     STS             13671..13907
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC135765P1"
+                     /db_xref="UniSTS:270771"
+     STS             13696..14026
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:363698"
+                     /db_xref="UniSTS:156787"
+     exon            13710..13846
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=8
+     STS             13887..14044
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC135765P2"
+                     /db_xref="UniSTS:270772"
+     STS             13924..14026
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:363795"
+                     /db_xref="UniSTS:156792"
+     STS             13932..14112
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="PMC156059P1"
+                     /db_xref="UniSTS:271356"
+     exon            13939..14012
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=9
+     exon            14208..14340
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=10a
+     exon            14281..14340
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=10b
+     STS             16821..16950
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:363701"
+                     /db_xref="UniSTS:156788"
+     exon            16832..16938
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=11
+     STS             17847..18048
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="GDB:363704"
+                     /db_xref="UniSTS:156789"
+     exon            17857..>19144
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=12
+     STS             18008..18124
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="D17S1678"
+                     /db_xref="UniSTS:82485"
+     STS             18465..18611
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="D17S1506E"
+                     /db_xref="UniSTS:151711"
+     STS             18479..>19144
+                     /standard_name="TP53_278"
+                     /db_xref="UniSTS:277840"
+     STS             19000..19076
+                     /gene="TP53"
+                     /gene_synonym="FLJ92943; LFS1; P53; TRP53"
+                     /standard_name="WI-20715"
+                     /db_xref="UniSTS:59997"
+ORIGIN      
+        1 ggattggggt tttcccctcc catgtgctca agactggcgc taaaagtttt gagcttctca
+       61 aaagtctaga gccaccgtcc agggagcagg tagctgctgg gctccgggga cactttgcgt
+      121 tcgggctggg agcgtgcttt ccacgacggt gacacgcttc cctggattgg gtaagctcct
+      181 gactgaactt gatgagtcct ctctgagtca cgggctctcg gctccgtgta ttttcagctc
+      241 gggaaaatcg ctggggctgg gggtggggca gtggggactt agcgagtttg ggggtgagtg
+      301 ggatggaagc ttggctagag ggatcatcat aggagttgca ttgttgggag acctgggtgt
+      361 agatgatggg gatgttagga ccatccgaac tcaaagttga acgcctaggc agaggagtgg
+      421 agctttgggg aaccttgagc cggcctaaag cgtacttctt tgcacatcca cccggtgctg
+      481 ggcgtaggga atccctgaaa taaaagatgc acaaagcatt gaggtctgag acttttggat
+      541 ctcgaaacat tgagaactca tagctgtata ttttagagcc catggcatcc tagtgaaaac
+      601 tggggctcca ttccgaaatg atcatttggg ggtgatccgg ggagcccaag ctgctaaggt
+      661 cccacaactt ccggaccttt gtccttcctg gagcgatctt tccaggcagc ccccggctcc
+      721 gctagatgga gaaaatccaa ttgaaggctg tcagtcgtgg aagtgagaag tgctaaacca
+      781 ggggtttgcc cgccaggccg aggaggaccg tcgcaatctg agaggcccgg cagccctgtt
+      841 attgtttggc tccacattta catttctgcc tcttgcagca gcatttccgg tttctttttg
+      901 ccggagcagc tcactattca cccgatgaga ggggaggaga gagagagaaa atgtccttta
+      961 ggccggttcc tcttacttgg cagagggagg ctgctattct ccgcctgcat ttctttttct
+     1021 ggattactta gttatggcct ttgcaaaggc aggggtattt gttttgatgc aaacctcaat
+     1081 ccctcccctt ctttgaatgg tgtgccccac cccgcgggtc gcctgcaacc taggcggacg
+     1141 ctaccatggc gtgagacagg gagggaaaga agtgtgcaga aggcaagccc ggaggtattt
+     1201 tcaagaatga gtatatctca tcttcccgga ggaaaaaaaa aaagaatggg tacgtctgag
+     1261 aatcaaattt tgaaagagtg caatgatggg tcgtttgata atttgtcgga aaaacaatct
+     1321 acctgttatc tagctttggg ctaggccatt ccagttccag acgcaggctg aacgtcgtga
+     1381 agcggaaggg gcgggcccgc aggcgtccgt gtggtcctcc gtgcagccct ccggcccgag
+     1441 ccggttcttc ctggtaggag gcggaactcg aattcatttc tcccgctgcc ccatctctta
+     1501 gctcgcggtt gtttcattcc gcagtttctt cccatgcacc tgccgcgtac cggccacttt
+     1561 gtgccgtact tacgtcatct ttttcctaaa tcgaggtggc atttacacac agcgccagtg
+     1621 cacacagcaa gtgcacagga agatgagttt tggcccctaa ccgctccgtg atgcctacca
+     1681 agtcacagac ccttttcatc gtcccagaaa cgtttcatca cgtctcttcc cagtcgattc
+     1741 ccgaccccac ctttattttg atctccataa ccattttgcc tgttggagaa cttcatatag
+     1801 aatggaatca ggctgggcgc tgtggctcac gcctgcactt tgggaggccg aggcgggcgg
+     1861 attacttgag gataggagtt ccagaccagc gtggccaacg tggtgaatcc ccgtctctac
+     1921 taaaaaatac aaaaattagc tgggcgtggt gggtgcctgt aatcccagct attcgggagg
+     1981 gtgaggcagg agaatcgctt gaacccggga ggcagaggtt gcagtgagcc aagatcgtgc
+     2041 cactacactc cagcctgggc gacaagaacg aaactccgtc tcaaaaaaaa ggggggaatc
+     2101 atacattatg tgctcatttt tgtcgggctt ctgtccttca atgtactgtc tgacattcgt
+     2161 tcatgttgta tatatcagta ttttgctcct tttcatttag tatagtccat cgattgtata
+     2221 tccgtccttt tgatggcctt ttgagttgtt tcccatttgc ggttatgaaa taaagctgct
+     2281 ataaacattc ttgtacaatt ctttttgtga tcatatgttt tcgtgtttct tggagaaata
+     2341 cttaggaggg gaattgcgag tttggaagta aaaagtagct gtattttgaa ctttttcaga
+     2401 agctctgagt tttccagagc ggttgtacca ttttacactc caactagcaa ggtatgggag
+     2461 ttattatggt tgtgccacag ccttccggac attaggtatt gtcagtcttt ctaatgtggt
+     2521 atatccttgt ggttgtaatt tacagttctc tattgactaa ggatgttcag cattttttca
+     2581 tgtgcctatt ggccattcgt attttgtttg taaagtagct cttcgagtct tttacctgtt
+     2641 attttggttt tttgtttgtt tttattgttc agttgtggga ctgctttata cattctggat
+     2701 acaagtcctt tatcagatcc atgtgtcgtg aatgttttct tctgatctgt tgcttgccta
+     2761 tttgtttgct ttacagagtt tacagtatct taagaggagt ggatttatct tttttatgtt
+     2821 cagtatttgc cttgtcctgt ttaggacatc tttttttttt tttttaaccc cagggtcatg
+     2881 aagatattat cttacatttt cttttaggac ctttatggtt gtaagtttta cagtaaggtc
+     2941 cttgagccat taattaattc ttaaaattaa ttgtttatgg tgtgaggtgt aggagtcagt
+     3001 ctctggtatc tttcctgtat ggaaatccag ttattctgtc tccacttgtt gaaataggct
+     3061 tcctttctct actgaatgct tttaatttta attattttac agttggagta tagggctacc
+     3121 attttagtgc tattttcttt ttttctttgt taatttttga gacagggact cacactgttg
+     3181 cccaggctag agtacaatgg cacaatcaag gcttactgca gcctcgaacc cctgggctca
+     3241 agcagtcctc tagcagcctc acgagtagct gggattactc caccacaccc agctaactat
+     3301 tttatttttt tgtattgaca ggatctcact atgttgccca ggctggtctc aaactgctgg
+     3361 cctcaagctt tcatcccatc tcggcctccc aaagtgctgg gattacaggt gtgagccacc
+     3421 atgcctgacc tcttagtgct attttctatt tatctcctct gttctctgct ctctttaaac
+     3481 gttggaggaa gaaacagtac ccatcttaca caaactcttc agaaaacaga ggaacagact
+     3541 gggcgcggtg gctcatacct gtaatctcag cactttggta cgctgaggca ggggatcatt
+     3601 tgaggtcggg agttcgagac cagcctggcc aacacggcga aaccccatct ctactaaaaa
+     3661 tacaaaaagt agctaggcgt ggtgacacat acctgtaatg ccagttactc aggaggctga
+     3721 ggcacaagaa tcccttgaac ctgggaagcg gaggttgcag tgagccgaga ttgcgccact
+     3781 gcactccagc ctgggcaaca gagtgagacc ctgtctcaga aaaaaaaaga aagaaagaaa
+     3841 aaatagagga atatttccca acttgttttc gaagccagca taatcctggt accaaaacca
+     3901 aacaaggaca ttataagaaa agaaaatata gaccaatatt cctgttagca tagacatgca
+     3961 acagctaacc aattttagca aaccaaacct ggtaatatag aaaaaaggat aaataggcca
+     4021 gtcgcggtgg ctcacgcctg taatcccagc actttgggag gctgaggcag gcagatcact
+     4081 tgaggtcagg agtttgagac cagcctgacc aacatggtga aaccccgttt ctaataaaaa
+     4141 tacaaaaatc aggctgggca cggtggctca cgcctgtaat cccagcactt tgggaggccg
+     4201 aggtgggcag atcacgaggt caggagttca agaccagcct gaccaatgtg gtgaaacgcc
+     4261 atctctacta aaaatacaaa aatcagccgg tgtggtggca cctgcctgta atcccagcta
+     4321 ctcaggaggc tgaggcagaa ttgcttgaac ccgggaggca gaggttgcag tgagccaaga
+     4381 tcgtgccact gcactccagc ctgggcgaca gagcaagact tcatctcaaa aaaaaaaaaa
+     4441 aattagctgg gcatggtggt gggcacctga aatcccagct actcgggagt ctgaggcagg
+     4501 agaatcgctt gaacccagga ggcagaagtt gcactgagct gggatcacac cattgcactc
+     4561 cagcctgggc aacagagtga gactccatct caaaaaaaga aaaagaaaaa ggataaatac
+     4621 attctaacca aataatgttt atctcatgat tgtagctgat tcaacattca aaaattggcc
+     4681 tggtgcagta gctcaggcct gtaatcccaa cattttagga ggctgaggca ggaagatctc
+     4741 ttgagcccag gatttcaaga ccagcctggg caacatagtc agactggtct ttactggggg
+     4801 gaaaaaaatc agtctgtgta attcaccaca ttaacaaagg gaaacataaa aaccctatga
+     4861 tcatttcaac agatgtagca aaagcagtta atgatattca acacatatgc atgattacaa
+     4921 accaaccaac ctcctagcaa actagggaaa ggaaacttaa cctagtttga taacagggcg
+     4981 tccacagtcg gagttccact agcagcatac ataatggtag aaaactcagt gctgccgggc
+     5041 gcggtggctc acgcctgtaa tgccagcact ttgggaggcc taggcgggcg gatcacgagg
+     5101 tcaggagatc gagactgtcc tgactagcat gctgaaaccc cgtctctact aaaaatacaa
+     5161 aaacaaaaaa ttagccgggc atggtggcgg gcgcctatag tcccagctac tcgggaggct
+     5221 gaggcgagag aatggcgtga acccgggagg cggagcttgc agagcctaga tcgtgccact
+     5281 gcactccagc ctgggtgaca gagtgagact tcgtctcaaa aaaaaaaaaa aaaaaaaaag
+     5341 aaaagaaaac tcaacgcttt ttcctctaag atcaggaact agaaaaggat ttgactctca
+     5401 caacgttgat accatactgg aggttttaac caggcaagaa aaagaaataa tgagggccgg
+     5461 gtgcggtggc tcaggcctgt aatcccagca ctttgggaag ccgagacggg tggatcacga
+     5521 ggtcaggaga tcgagaccat cctggctaac acggtgaaac cctgtctcta ctaaatatac
+     5581 aaaaaattag ccgggcgtag tggcgggcgc ctgtagtccc agctactcgg gaggctgagg
+     5641 caggagaatg gcgtgaactc agggggcgga gcttgcagtg agctgagatc gagccactgc
+     5701 actccagcct gggcgacaga gcaagactgt gtctcaaaaa aaaaaaaaga aaaagaaata
+     5761 atgattagtg gcccgatgtc tcacgcctat aatcccagca ctttgggagg ccgaggtggg
+     5821 cagatcacct gaggtctgga gttggagacc agcctgacaa agatggtgaa acctcgtctc
+     5881 tattaaaata ttaaaaaaat agccaggcgt tggccgggta cagtggctca tgcctgtaat
+     5941 cccagcactt tgggaggccg aggtgggtgg atcacctgag gtcaggagtt caacaccagc
+     6001 ctggccaaca tggtgaaacc ccatctctac taaaaataca aaaattagcc gggcgtagtg
+     6061 gcgggcgcct gtaatcccag ctacttggga ggcttaggca ggagaatcgc ttgaacctgg
+     6121 gaggcggagg ttgtagtgag ccgagattgc accattgcac tccagcctgg gtgacaaaag
+     6181 caaaaactcc gtctcaaaaa aaaaagaatt agccaggggt agtggtgaac gcctgtagtc
+     6241 ccagctactc aggaggcaga ggcaggagaa tcacttgaac ccaggaggca gaggttgcag
+     6301 tgagccgaga ttgtcccatt gcactccagc ctaggcgaca agagcaaaat tccatgtcaa
+     6361 aaaaaaaaaa aaaaaaggaa agaaaaaaaa taacgattag aaaggaagaa ataaaacaca
+     6421 ttcacagcca gtatgattct atacatacat gtcctaatgg ggccaggcgt ggtggctcat
+     6481 gcctgtaatc ctagcacttt taggaggctg aggcaggtgg cttccctggg accagcctgg
+     6541 ccaacatggt gaaaccccaa ctctaataaa aatacaaaaa atcagccagg cgtggtgacg
+     6601 ggcacctcta atcccagcta ctcaggaggc tgaggcagga gaattgcttg gacctgggag
+     6661 gcagaggttg cagtgagccg agatcgcgct attgcactcc agcctgggca acaagagtga
+     6721 aactccggca gggtgtggtg gcttacgcct gtaatcccag cacttcggga ggctgaggca
+     6781 ggccgatcac ctgaggtcag gagtttgaga ccaacctaac atggtgaaac cccgtctcta
+     6841 ctaaaaatac aagaattagc tgggtgtagt ggtgggcgcc tgtaatccca gctacttggg
+     6901 aggctgagac agaagaattg cttgaaccca ggaggtggag gttgcagtga gctgagatca
+     6961 tgccattgca caccacgccg ggcaacagag cgagattccg tctcaaaaaa aaaaaaaaag
+     7021 agtgaaactc tatctcaaaa aaaaaaaaaa gtcctaatgg aaaatccata aaaagctacc
+     7081 aaaactaata aataaatata gcagggttgc aggttacagg gcaatatagt tatccctcta
+     7141 tctgtagggg cttggttctg ggactcctca cacaccaaac ccacagatgt ctaagtccca
+     7201 tatataagac ggtatagtat ttggatttaa cctacacata tcctcccata tagtttaaat
+     7261 tatctctaga ttacttacat tacccccata caatgaaaat gctaatgtac atgcaagtat
+     7321 gtatgtaagt acttgtacta tattgtttag ggaatcactg gacatatagg ccttcaagac
+     7381 tgataccagc agccactgtt aagattctgg tcaggcctgc ccctgtttgg ggtctcagtt
+     7441 gatctcattg ccttcccacc cagccaaggg cacctgcatt tctcttggct ccctggccat
+     7501 ttggaaggcc tagttcagcc tggcacattt gtatcctggc ccactgatgc tggtacccct
+     7561 gggaaggtcc tgctctgaaa aacacggaga ttttagttgc tactgaagat ttgagagata
+     7621 aagacaggga gacctgtctg tagacctgtg tccctccaag tgggattgag actttgggcc
+     7681 ccccatttca ggacagcacc tcctggcctg ttgactgaat agatccctga aggaggtgta
+     7741 cttgcattaa tggagtgggg gtgggagcag taccacagat ccgcactaac aatcacacag
+     7801 ttctctctag aataataata tagaacaagt gaaatagaac aattgcagaa agagctaacc
+     7861 tttgttgagc tcttactgtg tgcccagcac tttcctcaac tctacatttc ccataataca
+     7921 cagagtacta ggtaggccag gcttggtggc tcacgcctgt aatcccagca ctttaggagg
+     7981 ccaagggggg tggatcacct gaggtcggga gttcaagacc agcctgacca acatggtgaa
+     8041 accccgtctc tactagaagt acaaaattag ccaggtgtgg tggcacatgc ttgtagtcct
+     8101 agctactcag caggctgagg caggagaatc atttgaatcc gggaggaggt tgcagtaagc
+     8161 ggagatagtg ccactgtact ccagcctggg caataagagc tgagactccg tctcaaaata
+     8221 aaataaaata aaataaaata aaataaaata aaataaaaaa agaaaagagc ctgccattaa
+     8281 aggagctgtt tggtagggga tgttttgtca gtgcaaacaa cagaaaagtg ggctgggcac
+     8341 agtggttcat gcctgtaatc ccagcacttt gggaggccaa ggcgggcgga tcacctgaag
+     8401 ttgggagttc aagaccagcc tgaccaatat ggagaaaccc cgtctctact aaaaatacaa
+     8461 aattagccgg gcgcagtggc gcatgcctgt aatcccagct actcgggagg ctgaggcagg
+     8521 agaatcgctt gaacctggga ggcagaggtt gcggtgagcc gagatcgcac cattgcactc
+     8581 cagcctggac gagagcaaaa ctctgtctca aaaaaaaaaa aaaacagaaa agtgtaacaa
+     8641 acacttacag taggcatgtt tcttagcaaa tctgatgaca aatttggcat aaagaaagag
+     8701 agcatccctg aaaaaaaaaa aaagaaaaag aaagagagca tcctgcctgg gcaacatagt
+     8761 gaaaccctgc ctctacaaaa aaactcaaaa attggccggg tgcagtggct cacacctgta
+     8821 atcccagcac tttgggagtc ggaggcggga ggatcacctg aggtcaggag ttcgaaacca
+     8881 gcctggccaa catggcaaaa ccccatctct actaaaaata caaaaaatta atcaggcgca
+     8941 ttggtgggcg cctgtaatcc cagctactca ggaagttgag gcaagaggat cgcttgaatc
+     9001 tgggaggtgg aggttacagt gagtcgagat cacaccactg cactctagcc tgggtgacag
+     9061 ggcgagactc cgtctccaaa aaaaaaaaga aaaagaaaaa gactaaaaaa ttagccaggc
+     9121 aggcctctgt ggtcccagct acttgggagg ctgaggcagg agaatcactg agcccaggag
+     9181 tccgaggctg tagtgagcca tgattgcacc actgtaccct agcttgggca acaaagcaag
+     9241 accctgcctc aaaagaaaaa agaaagaaag aaagaacatg gcgggccagg cacagtggct
+     9301 cacacctgta atcccagcgc tttgagaggc cgaggcaggt ggatcacaag gtcaggagtt
+     9361 ccacaccagc ctggccaaca tggtgaaacc ctgtctctac taaaaataca aaaaatcagc
+     9421 caggcatggt ggcaggggcc tgtaatccca gctactcggg aggctgaggc aggagaattg
+     9481 cttgaaacca gaaggcagag gttgcagtga gcctagactg caccactgca ctccagcctg
+     9541 ggcgaaaaga gccaaactcc atctcaaaaa acaaacaaaa aaacaaaaca aaagaaaaca
+     9601 tggcaaagcc tttgaaagct tgtctgggag aaggtgcgat gatagttgca taacttcgtg
+     9661 caagatgctg gtccacacag gggctgcccc ttgctctttc tcgctctctt aacctctcat
+     9721 ataacaggct tgtgtgttat tcacatttat tgagcccaag caggtgcaag gcattgtgat
+     9781 ctaatacttt ggtcagcaag acaacaagat agatcactgc cctgccctta ggaagtgtat
+     9841 atgctattag aggaaacaga taaaataaac aaggaaaagt atcagacaat gtaagtgcta
+     9901 tgagaatgca aatgaggtga tgtgaattaa aataggatga cttaaagtct gcacgggaag
+     9961 gagcctaccc ccatgttcct ggctagccaa ggaaccacca gttgattagc agagaagggc
+    10021 agccagtcta gctagagctt ttggggaaga gggagtggtt gttaagagat gagattaaag
+    10081 aagccgagac gggccattcg tgaggggttt gtaatgcagg gctgaggagt gtccgaagag
+    10141 aatgggcagg tgagcggtga gacagttgtt cttccagaag ctttgcagtg aaaggaatca
+    10201 aagaaatgga gccgtgtatc aggtggggaa gggtgggggc caagggggtg tccttcccca
+    10261 tacagagatt gcaggctgag aatgactata tccttgttaa caggaggtgg gagcagggca
+    10321 cggtagctca cacctgtaat cttggcactt taggaggctg aggcgggccg atcacctgaa
+    10381 gtaaggagtt cgagaccagc ctggccaaca tgcaaagccc tgtctctact aaaaatacaa
+    10441 aaattagctg ggtgtggtgg tactcgcctg taatcccagc tactcgggag actgaggcag
+    10501 gagaatggct tgaacccgga aggtagaggt tgcagtgagc tgagatcatg ccactgtgct
+    10561 ccagcctagg tgacagagag agactccatc tcaaaaaaaa aaaaaaaata caggaaggga
+    10621 gttgggaata gggtgcacat ttaggaagtc ttggggattt agtggtggga aggttggaag
+    10681 tccctctctg attgtctttt cctcaaagaa gtgcatggct ggtgaggggt ggggcaggag
+    10741 tgcttgggtt gtggtgaaac attggaagag agaatgtgaa gcagccattc ttttcctgct
+    10801 ccacaggaag ccgagctgtc tcagacactg gcatggtgtt gggggagggg gttccttctc
+    10861 tgcaggccca ggtgacccag ggttggaagt gtctcatgct ggatccccac ttttcctctt
+    10921 gcagcagcca gactgccttc cgggtcactg ccatggagga gccgcagtca gatcctagcg
+    10981 tcgagccccc tctgagtcag gaaacatttt cagacctatg gaaactgtga gtggatccat
+    11041 tggaagggca ggcccaccac ccccacccca accccagccc cctagcagag acctgtggga
+    11101 agcgaaaatt ccatgggact gactttctgc tcttgtcttt cagacttcct gaaaacaacg
+    11161 ttctggtaag gacaagggtt gggctgggga cctggagggc tggggacctg gagggctggg
+    11221 gggctggggg gctgaggacc tggtcctctg actgctcttt tcacccatct acagtccccc
+    11281 ttgccgtccc aagcaatgga tgatttgatg ctgtccccgg acgatattga acaatggttc
+    11341 actgaagacc caggtccaga tgaagctccc agaatgccag aggctgctcc ccccgtggcc
+    11401 cctgcaccag cagctcctac accggcggcc cctgcaccag ccccctcctg gcccctgtca
+    11461 tcttctgtcc cttcccagaa aacctaccag ggcagctacg gtttccgtct gggcttcttg
+    11521 cattctggga cagccaagtc tgtgacttgc acggtcagtt gccctgaggg gctggcttcc
+    11581 atgagacttc aatgcctggc cgtatccccc tgcatttctt ttgtttggaa ctttgggatt
+    11641 cctcttcacc ctttggcttc ctgtcagtgt ttttttatag tttacccact taatgtgtga
+    11701 tctctgactc ctgtcccaaa gttgaatatt ccccccttga atttgggctt ttatccatcc
+    11761 catcacaccc tcagcatctc tcctggggat gcagaacttt tctttttctt catccacgtg
+    11821 tattccttgg cttttgaaaa taagctcctg accaggcttg gtggctcaca cctgcaatcc
+    11881 cagcactctc aaagaggcca aggcaggcag atcacctgag cccaggagtt caagaccagc
+    11941 ctgggtaaca tgatgaaacc tcgtctctac aaaaaaatac aaaaaattag ccaggcatgg
+    12001 tggtgcacac ctatagtccc agccacttag gaggctgagg tgggaagatc acttgaggcc
+    12061 aggagatgga ggctgcagtg agctgtgatc acaccactgt gctccagcct gagtgacaga
+    12121 gcaagaccct atctcaaaaa aaaaaaaaaa aaagaaaagc tcctgaggtg tagacgccaa
+    12181 ctctctctag ctcgctagtg ggttgcagga ggtgcttacg catgtttgtt tctttgctgc
+    12241 cgtcttccag ttgctttatc tgttcacttg tgccctgact ttcaactctg tctccttcct
+    12301 cttcctacag tactcccctg ccctcaacaa gatgttttgc caactggcca agacctgccc
+    12361 tgtgcagctg tgggttgatt ccacaccccc gcccggcacc cgcgtccgcg ccatggccat
+    12421 ctacaagcag tcacagcaca tgacggaggt tgtgaggcgc tgcccccacc atgagcgctg
+    12481 ctcagatagc gatggtgagc agctggggct ggagagacga cagggctggt tgcccagggt
+    12541 ccccaggcct ctgattcctc actgattgct cttaggtctg gcccctcctc agcatcttat
+    12601 ccgagtggaa ggaaatttgc gtgtggagta tttggatgac agaaacactt ttcgacatag
+    12661 tgtggtggtg ccctatgagc cgcctgaggt ctggtttgca actggggtct ctgggaggag
+    12721 gggttaaggg tggttgtcag tggccctcca ggtgagcagt aggggggctt tctcctgctg
+    12781 cttatttgac ctccctataa ccccatgaga tgtgcaaagt aaatgggttt aactattgca
+    12841 cagttgaaaa aactgaagct tacagaggct aagggcctcc cctgcttggc tgggcgcagt
+    12901 ggctcatgcc tgtaatccca gcactttggg aggccaaggc aggcggatca cgaggttggg
+    12961 agatcgagac catcctggct aacggtgaaa ccccgtctct actgaaaaat acaaaaaaaa
+    13021 attagccggg cgtggtgctg ggcacctgta gtcccagcta ctcgggaggc tgaggaagga
+    13081 gaatggcgtg aacctgggcg gtggagcttg cagtgagctg agatcacgcc actgcactcc
+    13141 agcctgggcg acagagcgag attccatctc aaaaaaaaaa aaaaaaggcc tcccctgctt
+    13201 gccacaggtc tccccaaggc gcactggcct catcttgggc ctgtgttatc tcctaggttg
+    13261 gctctgactg taccaccatc cactacaact acatgtgtaa cagttcctgc atgggcggca
+    13321 tgaaccggag gcccatcctc accatcatca cactggaaga ctccaggtca ggagccactt
+    13381 gccaccctgc acactggcct gctgtgcccc agcctctgct tgcctctgac ccctgggccc
+    13441 acctcttacc gatttcttcc atactactac ccatccacct ctcatcacat ccccggcggg
+    13501 gaatctcctt actgctccca ctcagttttc ttttctctgg ctttgggacc tcttaacctg
+    13561 tggcttctcc tccacctacc tggagctgga gcttaggctc cagaaaggac aagggtggtt
+    13621 gggagtagat ggagcctggt tttttaaatg ggacaggtag gacctgattt ccttactgcc
+    13681 tcttgcttct cttttcctat cctgagtagt ggtaatctac tgggacggaa cagctttgag
+    13741 gtgcgtgttt gtgcctgtcc tgggagagac cggcgcacag aggaagagaa tctccgcaag
+    13801 aaaggggagc ctcaccacga gctgccccca gggagcacta agcgaggtaa gcaagcagga
+    13861 caagaagcgg tggaggagac caagggtgca gttatgcctc agattcactt ttatcacctt
+    13921 tccttgcctc tttcctagca ctgcccaaca acaccagctc ctctccccag ccaaagaaga
+    13981 aaccactgga tggagaatat ttcacccttc aggtactaag tcttgggacc tcttatcaag
+    14041 tggaaagttt ccagtctaac actcaaaatg ccgttttctt cttgactgtt ttacctgcaa
+    14101 ttggggcatt tgccatcagg gggcagtgat gcctcaaaga caatggctcc tggttgtagc
+    14161 taactaactt cagaacacca acttatacca taatatatat tttaaaggac cagaccagct
+    14221 ttcaaaaaga aaattgttaa agagagcatg aaaatggttc tatgactttg cctgatacag
+    14281 atgctacttg acttacgatg gtgttacttc ctgataaact cgtcgtaagt tgaaaatatt
+    14341 gtaagttgaa aatggattta atacacctaa tctaaggaac atcatagctt agcctagcct
+    14401 gctttttttt tttttttttt tggagacaga gtctcactct gtcacccagg ctggagtgca
+    14461 gtggcgggat ctcggctcac tgcaacctcc gccttctggg ttcaagcgat tctcctgcct
+    14521 cagcccactg agtagctggg attacaggca cctgccccga cgcccagcta attttttgtt
+    14581 atttatttat tttttttttt agtagagatg aggtttcacc atgttggcca ggctagtctc
+    14641 gaactcctga ccttgtgatc tgcctgcctt ggcctcccaa agtgctggga ttacaggcgt
+    14701 gagccaccgc acccggcctg cctagcctac ttttatttta tttttaatgg agacagcatc
+    14761 ttgctctgtt gcccaggctg gattacagtg atgtgatcat agctcattat accctcctgg
+    14821 gctcaagcaa tccccctaac tctgcctccc cagtagctag gaccacaggc atacaccacc
+    14881 atacccagct aatttttaaa attttttgta gatagataga gtctcactat gttgcccagg
+    14941 ctggtctcta gcctactttt ttgagacaag gtcttgctct gtcacccagg ctggatagag
+    15001 tgcagtagtg cagtcacagc tcactgcagc ctccacctcc caggctccat ccatcctccc
+    15061 agctcagcct cccaagttgc ttcaactaca ggcctgcacc accatgcctg gctaattttt
+    15121 atttatttat ttttatttta ttttatttta tttttttgag actcagtctc actctgtcgc
+    15181 ccaggctgga gtgcagtggc atgatctcgg ctcactgcaa cctctgcctc ctgggttcaa
+    15241 gtgattctcc tgcctcagcc tcccgaatag ctaggactac aagcgcctgc taccacgccc
+    15301 agctaatttt tgtattttta gtagagacag ggtttcacca tgttggccag gctggtctcg
+    15361 aacttctgac catgtgatcc gcccgcctcg gcctcccaaa gtgctgggat tacaggtgtg
+    15421 agccaccacg cccggctaat ttttatttat ttatttaaag acagagtctc actctgtcac
+    15481 tcaggctaga gtgcagtggc accatctcag ctcactgcag ccttgacctc cctgggctcc
+    15541 ggtgatttca ccctcccaag tagctaggac tacaggcaca tgccacgaca cccagctaat
+    15601 tttttatttt ctgtgaagtc aaggtcttgc tacgttgccc atgctggtat caaacccctg
+    15661 ggctcaatca atccttccac ctcagcctcc ccaagtattg gggttacagg catgagctac
+    15721 cacactcagc cctagcctac ttgaaacgtg ttcagagcat ttaagttacc ctacagttgg
+    15781 gcaaagtcat ctaacacaaa gcccttttta tagtaataaa atgttgtata tctcatgtga
+    15841 tttattgaat attgttactg aaagtgagaa acagcatggt tgcatgaaag gaggcacagt
+    15901 cgagccaggc acagcctggg cgcagagcga gactcaaaaa aagaaaaggc caggcgcact
+    15961 ggctcacgcc tgtaatccca gcatttcggg aggctgaggc gggtggatca cctgaggtca
+    16021 ggagttcaag accagcctag ccaacatggt gaaaccccgt ctctactaaa atacaaaaat
+    16081 taaccgggcg tgatggcagg tgcctgtaat cccagctact tgggaggctg aggcaggaga
+    16141 atcgcttgaa ccaggaggcg gaggttgcag ggagccaaga tggcgccact gcactccagc
+    16201 ctgggcgata gagtgagact ccgtctcaga aaaaaaagaa aagaaacgag gcacagtcgc
+    16261 atgcacatgt agtcccagtt acttgagagg ctaaggcagg aggatctctt gagcccaaga
+    16321 gtttgagtcc agcctgaaca acatagcaag acatcatctc taaaatttaa aaaagggccg
+    16381 ggcacagtgg ctcacacctg taatcccagc actttgggag gtggaggtgg gtagatcacc
+    16441 tgacgtcagg agttggaaac cagcctggct aacatggtga agccccatct ctactaaaaa
+    16501 cacaaaaatt agccaggtgt ggtagcacac gcctgtagtc ccagctactc gggaggctga
+    16561 ggcacaagaa tcacttgaac cccagaggcg gagattgcaa tcagccaaga ttgcaccatt
+    16621 gcactcccgc ctgggcaaca gagtgagacc ccatctcaaa ataaataaat aaatattttt
+    16681 aaaagtcagc tgtataggta cttgaagtgc agtttctact aaatgcatgt tgcttttgta
+    16741 ccgtcataaa gtcaaacaat tgtaacttga accatctttt aactcaggta ctgtgtatat
+    16801 acttacttct ccccctcctc tgttgctgca gatccgtggg cgtgagcgct tcgagatgtt
+    16861 ccgagagctg aatgaggcct tggaactcaa ggatgcccag gctgggaagg agccaggggg
+    16921 gagcagggct cactccaggt gagtgacctc agccccttcc tggccctact cccctgcctt
+    16981 cctaggttgg aaagccatag gattccattc tcatcctgcc ttcatggtca aaggcagctg
+    17041 accccatctc attgggtccc agccctgcac agacattttt ttagtcttcc tccggttgaa
+    17101 tcctataacc acattcttgc ctcagtgtat ccacagaaca tccaaaccca gggacgagtg
+    17161 tggatacttc tttgccattc tccgcaactc ccagcccaga gctggagggt ctcaaggagg
+    17221 ggcctaataa ttgtgtaata ctgaatacag ccagagtttc aggtcatata ctcagccctg
+    17281 ccatgcaccg gcaggtccta ggtgaccccc gtcaaactca gtttccttat atataaaatg
+    17341 gggtaagggg gccgggcgca gtggctcacg aatcccacac tctgggaggc caaggcgagt
+    17401 ggatcacctg aggtcgggag tttgagccca gcctgaccaa catggagaaa ccccatctct
+    17461 actaaaaata caaaagtagc cgggcgtggt gatgcatgcc tgtaatccca gctacctact
+    17521 cgggaggctg aggcaggaga atcgcttgaa cccgggaggc agaggttgcg gtgagctgag
+    17581 atctcaccat tacactccag cctgggcaac aagagtgaaa ctccgtctca aaaaagataa
+    17641 ataaagtaaa atggggtaag ggaagattac gagactaata cacactaata ctctgaggtg
+    17701 ctcagtaaac atatttgcat ggggtgtggc caccatcttg atttgaattc ccgttgtccc
+    17761 agccttaggc ccttcaaagc attggtcagg gaaaaggggc acagaccctc tcactcatgt
+    17821 gatgtcatct ctcctccctg cttctgtctc ctacagccac ctgaagtcca aaaagggtca
+    17881 gtctacctcc cgccataaaa aactcatgtt caagacagaa gggcctgact cagactgaca
+    17941 ttctccactt cttgttcccc actgacagcc tcccaccccc atctctccct cccctgccat
+    18001 tttgggtttt gggtctttga acccttgctt gcaataggtg tgcgtcagaa gcacccagga
+    18061 cttccatttg ctttgtcccg gggctccact gaacaagttg gcctgcactg gtgttttgtt
+    18121 gtggggagga ggatggggag taggacatac cagcttagat tttaaggttt ttactgtgag
+    18181 ggatgtttgg gagatgtaag aaatgttctt gcagttaagg gttagtttac aatcagccac
+    18241 attctaggta ggggcccact tcaccgtact aaccagggaa gctgtccctc actgttgaat
+    18301 tttctctaac ttcaaggccc atatctgtga aatgctggca tttgcaccta cctcacagag
+    18361 tgcattgtga gggttaatga aataatgtac atctggcctt gaaaccacct tttattacat
+    18421 ggggtctaga acttgacccc cttgagggtg cttgttccct ctccctgttg gtcggtgggt
+    18481 tggtagtttc tacagttggg cagctggtta ggtagaggga gttgtcaagt ctctgctggc
+    18541 ccagccaaac cctgtctgac aacctcttgg tgaaccttag tacctaaaag gaaatctcac
+    18601 cccatcccac accctggagg atttcatctc ttgtatatga tgatctggat ccaccaagac
+    18661 ttgttttatg ctcagggtca atttcttttt tctttttttt tttttttttt ctttttcttt
+    18721 gagactgggt ctcgctttgt tgcccaggct ggagtggagt ggcgtgatct tggcttactg
+    18781 cagcctttgc ctccccggct cgagcagtcc tgcctcagcc tccggagtag ctgggaccac
+    18841 aggttcatgc caccatggcc agccaacttt tgcatgtttt gtagagatgg ggtctcacag
+    18901 tgttgcccag gctggtctca aactcctggg ctcaggcgat ccacctgtct cagcctccca
+    18961 gagtgctggg attacaattg tgagccacca cgtccagctg gaagggtcaa catcttttac
+    19021 attctgcaag cacatctgca ttttcacccc acccttcccc tccttctccc tttttatatc
+    19081 ccatttttat atcgatctct tattttacaa taaaactttg ctgccacctg tgtgtctgag
+    19141 gggt
+//
+

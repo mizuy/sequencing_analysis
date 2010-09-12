@@ -1,0 +1,460 @@
+#!/usr/bin/env ruby
+
+require 'bio'
+require 'prettyprint_sequence'
+require 'optparse'
+require 'stringio'
+require 'sequencing'
+require 'nucleotide'
+
+require 'vectorimage'
+
+
+def is_cpg(seq, i)
+  s = seq.to_s
+  if i+1 >= seq.length
+    false
+  elsif s[i]=='c' and s[i+1]=='g'
+    true
+  end
+end  
+
+def cpg_locations(seq)
+  cpgl = {}
+  count = 0
+  (0...seq.length).each do |i|
+    if is_cpg(seq, i)
+      cpgl[i] = count
+      count += 1
+    end
+  end
+  cpgl
+end
+
+class SeqViewImage
+
+  class TrackGroup
+    include Enumerable
+
+    def initialize(name, &block)
+      @name = name
+      @tracks = []
+      @ymargin = 3
+      yield self if block_given?
+    end
+
+    def each
+      @tracks.each do |i|
+        yield i
+      end
+    end
+
+    def << (track)
+      @tracks << track
+    end
+
+    def height
+      @tracks.inject(0) { |s,t| s+t.height+@ymargin }
+    end
+    
+    def name_length
+      @tracks.inject(0) {|s,i| [s,i.name.length].max }
+    end
+
+    def to_s
+      v = @tracks.map {|t|"#{t.to_s}"}.join ","
+      "TrackGroup(#{@name}, #{v})"
+    end
+    
+    def draw body
+      y = 0
+      @tracks.each do |track|
+        body.translate(0,y) do |body|
+          track.draw body
+        end
+        y += track.height + @ymargin
+      end
+    end
+    
+  end
+
+  class Track
+    def initialize(h=10)
+      @height = h
+    end
+    def height
+      @height
+    end
+    
+    def name
+      "no name"
+    end
+    
+    def draw body
+      return if name.empty?
+      puts "drawing #{name}"
+      rx,ry = body.trans 0, 10
+      body.absolute.text(rx-5,ry) do |t|
+        t.tspan(name).styles(:text_anchor=>'end', :font_size=>10,
+                             :font_family=>'monospace', :fill=>'black')
+      end
+    end
+
+    def draw_vline body, x, from, to, sty={}
+      body.line(x, from, x, to).styles(sty)
+    end
+    def draw_vgraph body, x, from, to, value, sty={}
+      f = (to-from)*(1.0-value)
+      body.line(x, f, x, to).styles(sty)
+    end
+    def draw_hline body, from, to, y, sty={}
+      body.line(from, y, to, y).styles(sty)
+    end
+    def draw_hbar body, from, to, y, thick, sty={}
+      len = to-from
+      body.rect(len,thick, from,y-thick/2).styles(sty)
+    end
+  end
+
+  class FeatureTrack < Track
+    def initialize(feature)
+      super()
+      @feature = feature
+    end
+    def name
+      @feature.feature
+    end
+    def draw body
+      super(body)
+      h = 4
+      loc = @feature.locations
+      draw_hline body,loc.first.from, loc.last.to, height/2
+      loc.each do |l|
+        draw_hbar body,l.from, l.to, height/2, 4, {:fill=>"blue"}
+      end
+    end
+  end
+
+  class SequenceTrack < Track
+    BASE_COLOR = {'A'=>'#00FF00', 'T'=>'#FF0000', 'G'=>'#000000', 'C'=>'#0000FF'}
+    def initialize(seq)
+      super()
+      @seq = seq
+    end
+    def name 
+      "sequence"
+    end
+    def draw body
+      super(body)
+      @seq.to_s.each_char.with_index do |base,index|
+        color = BASE_COLOR[base.upcase]
+        draw_vline body, index, 0, height, {:fill=>color}
+      end
+    end
+  end
+
+  class CpgBarTrack < Track
+    def initialize(seq)
+      super()
+      @length = seq.length
+      @cpg = cpg_locations(seq)
+    end
+    def name
+      "CpG site"
+    end
+    def draw body
+      super(body)
+      puts "drawing cpg track..."
+      draw_hline body, 0, @length, height/2
+      @cpg.each do |key,value|
+        draw_vline body, key, 0, height
+      end
+    end
+  end
+
+  class GcPercentTrack < Track
+    def initialize(seq)
+      super()
+      @seq = seq
+    end
+    def name
+      "gc percent"
+    end
+    def draw body
+      super(body)
+      window_size = 30
+      index = 0
+      @seq.window_search(window_size) do |subseq|
+        c = subseq.gc_content.to_f
+        color = c >= 0.5 ? "#000000" : "#555500"
+        base = index+window_size/2.0
+        draw_vgraph body, base, 0, height, c, {:fill=>color}
+
+        index += 1
+      end
+    end
+  end
+
+  class PCRTrack < Track
+    def initialize(pcr)
+      super(20)
+      @pcr = pcr
+    end
+    def name
+      @pcr.name
+    end
+    def draw body
+      super(body)
+      puts "products(size) = #{@pcr.products.map do |i|i.length;end}"
+      @pcr.products.each do |p|
+        draw_hbar body, p.startpos, p.startpos_i, 4, 4, {:fill=>'#ff0000'}
+        draw_hbar body, p.startpos_i, p.endpos_i, 4, 4, {:fill=>'#888888'}
+        draw_hbar body, p.endpos_i, p.endpos, 4, 4, {:fill=>'#0000ff'}
+
+        rx,ry = body.trans((p.startpos+p.endpos)/2,18)
+        body.absolute.text(rx,ry) do |t|
+          t.tspan(@pcr.name).styles(:text_anchor=>'middle', :font_size=>10,
+                                    :font_family=>'monospace', :fill=>'black')
+        end
+
+      end
+
+    end
+  end
+
+  class MeasureTrack < Track
+    def initialize(length,zero,step)
+      super(18)
+      @length = length
+      @zero = zero
+      @step = step
+    end
+    def name
+      ''
+    end
+    def draw body
+      super(body)
+      (0...@length).each_slice(1000) do |i|
+        draw_vline body, i[0], 10, 15
+        rx,ry = body.trans(i[0],10)
+        body.absolute.text(rx,ry) do |t|
+          t.tspan(i[0].to_s).styles(:text_anchor=>'middle', :font_size=>10,
+                                    :font_family=>'monospace', :fill=>'black')
+        end
+      end
+    end
+  end
+
+  class MotifTrack < Track
+  end
+
+  def initialize()
+    @trackg = []
+    @genbanks = []
+    new_group 'default'
+  end
+
+  def new_group(name)
+    @trackg << TrackGroup.new(name)
+  end
+
+  def add_template(genbank)
+    @genbanks << genbank
+    @trackg.last << MeasureTrack.new(genbank.naseq.length,0,500)
+    @trackg.last << CpgBarTrack.new(genbank.naseq)
+    @trackg.last << GcPercentTrack.new(genbank.naseq)
+    @trackg.last << SequenceTrack.new(genbank.naseq)
+    genbank.features.each do |feature|
+      next unless %w(gene mrna cds sts).include? feature.feature.downcase
+      @trackg.last << FeatureTrack.new(feature)
+    end
+  end
+
+  def add_pcr(pcr)
+    @trackg.last << PCRTrack.new(pcr)
+  end
+
+  def add_motif(name, motif)
+    @trackg.last << MotifTrack.new(motif)
+  end
+
+  def length
+    @genbanks.inject(0){|s,a| [s,a.length].max}
+  end
+  def height
+    @trackg.inject(0){|s,tg| s+tg.height+ymargin }
+  end
+  def name_length
+    @trackg.inject(0){|s,t| [s,t.name_length].max }
+  end
+
+  def ymargin
+    10
+  end
+
+  def draw
+    if not @genbanks
+      return
+    end
+    puts "SeqViewImage#draw w,h = #{length} #{height}"
+
+    nl = (name_length+1)*7.0
+    width = 1200.0
+
+    puts "nl=#{nl} #{width}"
+    scaley = 1.0
+
+    scalex = (width-nl)/length
+    view_w = length + nl/scalex
+
+    image = VectorImage.new(width, height.px*scaley, view_w, height, nl, 0)
+    v = image.translate(0,0)
+    @trackg.each do |tg|
+      tg.draw v
+    end
+    image.write('test.gif')
+  end
+end
+
+
+def render_genbank(gb_file, output)
+  gb_file.each_entry do |gb|
+    # TODO remove this. Bio::GenBank bug??
+    next unless gb.length
+    
+    gb.features.each do |feature|
+      print " #{feature.feature}\n"
+      puts "  location: #{feature.locations}"
+      feature.each do |q|
+        #puts "  #{q.qualifier}: #{q.value}"
+      end
+    end
+
+    puts "draw"
+    sv = SeqViewImage.new
+    sv.add_template(gb)
+    sv.draw
+  end
+end
+
+
+def parse_primers(f)
+  ret = Hash.new
+  lineno = 0
+  while l = f.gets
+    next if l.start_with? '#'
+    next if l.strip.empty?
+    ll = l.split(':')
+    if ll.length != 2
+      puts "lineno #{lineno}: invalid line: '#{l}'"
+      next
+    end
+    name = ll[0].strip.upcase
+    seq = Bio::Sequence::NA.new(ll[1].strip)
+    ret[name] = seq
+    lineno += 1
+  end
+  ret
+end
+
+def parse_seqview(file)
+  category = 'default'
+  lineno = 0
+  while l = file.gets
+    l.strip!
+    next if l.start_with? '#'
+    next if l.empty?
+
+    if l.start_with? '>'
+      category = l[1..-1].strip
+      next
+    end
+    
+    ll = l.split(':')
+    raise if ll.length != 2
+    name,value = ll
+    name.strip!
+    value.strip!
+
+    error = lambda {|msg| puts "line #{lineno}, category=#{category}, name=#{name}, value=#{value}::  #{msg}"}
+    
+    yield category, name, value, error
+    lineno += 1
+  end
+end
+
+def render_seqview(file,output_filename,relative_path)
+  primers = nil
+  template_name = nil
+  template = nil
+  pcrs = []
+
+  sv = SeqViewImage.new
+  sv.new_group 'TODO filename here'
+
+  parse_seqview(file) do |category, name, value, error|
+    case category
+    when 'general'
+      case name
+      when 'primers'
+        filename = relative_path + '/' + value
+        puts "loading primers: #{filename}"
+        primers = parse_primers(File.open(filename,'r'))
+      else
+        puts error.call 'unkown entry'
+      end
+    when 'template'
+      filename = relative_path + '/' + value
+      template_name = name
+      template = Bio::GenBank.new(File.open(filename, 'r').read())
+      sv.add_template(template)
+      puts "genbank #{name}=#{filename} loaded."
+    when 'pcr'
+      fw,rv = value.split(',')
+      fw.strip!
+      rv.strip!
+      fw.upcase!
+      rv.upcase!
+      puts error.call "no template are given." unless template
+      puts error.call "no such fw-primer #{fw}" unless primers.has_key? fw
+      puts error.call "no such rv-primer #{rv}" unless primers.has_key? rv
+
+      sv.add_pcr Nucleotide::PCR.new(name, template.seq, primers[fw], primers[rv])
+    else
+      puts error.call "unkown entry"
+    end
+  end
+  
+  sv.draw
+end
+
+def main
+  output_filename = 'output.html'
+
+  opts = OptionParser.new
+  opts.banner = "Usage: seqview input [-o output_filename]"
+  opts.on("-oFILENAME","--output FILENAME", String) {|val| output_filename = val}
+  
+  rest = opts.parse(ARGV)
+  unless rest.length >= 1
+    puts "no genbank"
+    puts opts.to_s
+  end
+  if rest.length > 1
+    # TODO multiple file
+    puts "too many arguments"
+  end
+  
+  filename = rest[0]
+  case File.extname filename
+  when '.gb'
+    gb = Bio::FlatFile.new(Bio::GenBank, File.open(filename, 'r'))
+    render_genbank(gb, output_filename)
+  when '.seqv'
+    sv = File.open(filename, 'r')
+    
+    render_seqview(sv, output_filename, File.dirname(filename))
+  end
+end
+
+main

@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+
+require 'bio'
+require 'optparse'
+
+def get_refseqgene_id(name)
+  Bio::NCBI.default_email = "mizugy@gmail.com"
+  query = "#{name.strip}[Gene Name] AND RefSeqGene"
+  n = Bio::NCBI::REST::ESearch.sequences(query,{'db'=>'nuccore'})
+
+  case n.length
+  when 0
+    puts "no refseqgene for #{name}, db=nuccore, query=#{query}"
+    return nil
+  when 1
+    return n[0]	
+  else
+    puts "2 or more results for #{name}, db=nuccore, query=#{query}"
+    puts n
+    return nil
+  end
+end
+
+def main
+  output_filename = nil
+
+  opts = OptionParser.new
+  opts.banner = "Usage: get_refseqgene gene_name [-o output_filename]"
+  opts.on("-oFILENAME","--output FILENAME", String) {|val| output_filename = val}
+  
+  rest = opts.parse(ARGV)
+  unless rest.length >= 1
+    puts "no gene name given."
+    puts opts.to_s
+    exit
+  end
+  if rest.length > 1
+    puts "too many gene name geven."
+    exit
+  end
+
+  genename = rest[0]
+  output_filename ||= "#{genename}.gb"
+
+  id = get_refseqgene_id(genename)
+  unless id
+    puts "failed to search #{genename}}"
+  end
+
+  p = Bio::NCBI::REST::EFetch.sequence(id, 'gb')
+  puts "failed to fetch GenBank " unless p 
+  File.open(output_filename,'w').write(p)
+  puts "successfully write #{output_filename}"
+end
+
+main
